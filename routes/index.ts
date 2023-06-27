@@ -8,4 +8,6 @@ export const routesPath = {
   DASHBOARD: "/profile/dashboard",
   MY_WRITING: "/profile/writing",
   BLOG_PAGE: "/blog",
+  JOURNAL_PAGE: "/journal",
+  JOURNAL_SECTION_PAGE: "/journal/section",
 };

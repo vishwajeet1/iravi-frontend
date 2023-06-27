@@ -1,5 +1,9 @@
 import { createContext, FunctionComponent, useMemo, useState } from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+  createTheme,
+  StyledEngineProvider,
+  ThemeProvider,
+} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 interface Props {}

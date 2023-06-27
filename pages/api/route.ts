@@ -47,21 +47,21 @@ export default async function list(req: any, res: any) {
     }
     return await Axios(config)
       .then((response: any) => {
-        return res.json(response.data);
+        console.log(response);
+        return res.json({ success: true, data: response.data });
       })
       .catch((err: any) => {
-        console.log("status = ", err.response.status);
-        console.log("message = ", err.response.data.message);
-        if (err.response.status === 403) {
-          res.json({
-            success: false,
-            message: "You are not authorized to take this action",
-          });
-        } else {
-          throw err;
-        }
+        console.log("err", err.message);
+        res.status(400).json({
+          success: false,
+          message: "You are not authorized to take this action",
+        });
       });
   } catch (error: any) {
-    res.status(error.response.status).end(error.response.data.message);
+    console.log(error.message);
+    res.status(400).json({
+      success: false,
+      message: "Something went wrong",
+    });
   }
 }

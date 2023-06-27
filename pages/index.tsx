@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import { ColorModeContext } from "components/MuiComponent/Theme/IraviTheme";
 import { useContext } from "react";
 import { useTheme } from "@mui/material/styles";
-import Layout from "components/common/Layout";
 import Navigation from "components/MuiComponent/Layout/Navigation";
 
 const Home: NextPage = () => {
@@ -22,4 +21,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default withAuth(Home, true);
+export default withAuth(Home);
